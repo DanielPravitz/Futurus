@@ -15,10 +15,10 @@ const Widget = styled.div`
     }
 
     p {
-        font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace; 
+        font-family: ${({ theme }) => theme.font};
         font-size: 14px;
         font-weight: 400;
-    line-height: 1;
+        line-height: 1;
     }
 `;
 
@@ -41,6 +41,8 @@ Widget.Header = styled.header`
     }
 }
 
+    
+
     h1 {
         animation: neon 4s ease infinite;
         -moz-animation: neon 4s ease infinite;
@@ -58,7 +60,7 @@ Widget.Header = styled.header`
 
 Widget.Content = styled.header`
     padding: 24px 32px 32px 32px;
-
+    
     & > *:first-child{
         margin-top:0;
     }
@@ -70,6 +72,27 @@ Widget.Content = styled.header`
         list-style:none;
         padding:0;
     }
+`;
+
+Widget.Topic = styled.a`
+    outline: 0;
+    text-decoration: none;
+     color: ${({ theme }) => theme.colors.contrastText};
+    background-color: ${({ theme }) => `${theme.colors.primary}40`};
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: ${({ theme }) => theme.borderRadius};
+    transition: .3s;
+    display: block;
+  
+    &:hover,
+    &:focus {
+    opacity: .5;
+    }
+
+    
+    
 `;
 
 export default Widget;

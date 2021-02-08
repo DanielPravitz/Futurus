@@ -1,28 +1,67 @@
 {
     "bg": "/bg.jpg",
     "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "description": "Teste os seus conhecimentos sobre o filme Blade Runner",
     "questions": [
         {
-            "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-            "title": "Como fazer um seletor por id via CSS?",
-            "description": "Essa é pra aquecer",
-            "answer": 2,
+            "image": "https://media.giphy.com/media/3o7bug2wkdhpf7kbFS/source.gif",
+            "title": "Como é chamado quando um Replicante é morto? ",
+            "description": "Essa é para aquecer",
+            "answer": 3,
             "alternatives": [
-                ".elemento",
-                "*elemento",
-                "#elemento",
-                "%elemento"
+                "Execução",
+                "Eliminação",
+                "Restauração",
+                "Aposentadoria"
             ]
         },
         {
-            "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-            "title": "Como fazer um background gradiente com css?",
-            "description": "Faz tempo em haha",
+            "image": "https://media.giphy.com/media/3o7bug2wkdhpf7kbFS/source.gif",
+            "title": "Qual o nome da empresa responsável pela criação dos Replicantes?",
+            "description": "Essa é fácil!",
             "answer": 0,
             "alternatives": [
-                "background: linear-gradient(#e66465, #9198e5);",
-                "background: gradient(#e66465, #9198e5);"
+                "The Tyrel Corporation",
+                "Nexus 5",
+                "Scott Free",
+                "Deckard"
+            ]
+        },
+        {
+            "image": "https://media.giphy.com/media/3o7bug2wkdhpf7kbFS/source.gif",
+            "title": "Qual o nome do teste realizado para identificar um replicante?",
+            "description": "Vamos por partes...",
+            "answer": 1,
+            "alternatives": [
+                "Zohra",
+                "Voigt-Kampff",
+                "Voigt-Test",
+                "Hannibal Chew"
+            ]
+        },
+        {
+            "image": "https://media.giphy.com/media/3o7bug2wkdhpf7kbFS/source.gif",
+            "title": "Replicantes são projetados para copiar os seres humanos, exceto  ",
+            "description": "Vish..",
+            "answer": 1,
+            "alternatives": [
+                "seus sonhos.",
+                "suas emoções.",
+                "seu envelhecimento",
+                "suas habilidade de ter filhos",
+                "sua inteligência"
+            ]
+        },
+        {
+            "image": "https://media.giphy.com/media/3o7bug2wkdhpf7kbFS/source.gif",
+            "title": "Onde os replicantes fugitivos estão tentanto se infiltrar?",
+            "description": "Hmm, pense bem.",
+            "answer": 3,
+            "alternatives": [
+                "Na polícia",
+                "No governo",
+                "No cérebro humano",
+                "Na Corporação Tyrel"
             ]
         }
     ],
@@ -38,6 +77,7 @@
             "wrong": "#FF5722",
             "success": "#4CAF50"
         },
-        "borderRadius": "4px"
+        "borderRadius": "4px",
+        "font": "Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace"
     }
 }

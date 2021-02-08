@@ -1,45 +1,55 @@
 import styled from 'styled-components'
-import db from '../db.json';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
+import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
-
-/*const BackgroundImage = styled.div`
-  background-image: url(${db.bg});
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-`;*/
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-
-  @media screen and (max-width: 500px) {
-    margin:auto;
-    padding: 15px;
-  }
-`;
-
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
 
+      <Head>
+        <title>Futurus Quiz - Blade Runner</title>
+        <link rel="shortcut icon" href="iconTitle.png" type="image/x-icon"></link>
+      </Head>
+
+      <QuizContainer>
         <Widget>
 
           <Widget.Header>
-            <h1> Blade Runner</h1>
+            <h1>Blade Runner</h1>
           </Widget.Header>
 
           <Widget.Content>
             <p>Teste seus conhecimentos sobre Blade Runner e divirta-se!</p>
+
+            <form onSubmit={function (infoEvento) {
+              infoEvento.preventDefault();
+              router.push(`/quiz?name=${name}`);
+            }}
+            >
+              <Input
+                name="nomeDoUsuario"
+                onChange={(infoEvento) => setName(infoEvento.target.value)}
+                placeholder="Informe seu nome"
+              />
+              <br></br>
+              <Button type="submit" disabled={name.length === 0}>
+                Jogar
+              </Button>
+
+            </form>
           </Widget.Content>
 
         </Widget>
